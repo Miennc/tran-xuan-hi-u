@@ -1,0 +1,241 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+  border: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+.thumb {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  img {
+    width: 100%;
+    min-height: 100%;
+    object-fit: center;
+  }
+}
+
+.header {
+  .header-left,
+  .header-right {
+    font-size: 1rem;
+    font-weight: 100;
+  }
+  .header-mid {
+    font-size: 2rem;
+    font-weight: 800;
+  }
+}
+.main {
+  position: relative;
+  .bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-bottom: 10%;
+    @media (max-width:1024px){
+        transform: translateX(120px);
+    }
+    .thumb {
+      &:nth-child(1) {
+        width: 10rem;
+        height: 10rem;
+      }
+      &:nth-child(2) {
+        width: 20rem;
+        height: 20rem;
+        transform: translateX(-100px);
+      }
+    }
+  }
+  .content {
+    position: relative;
+    z-index: 100;
+    .text-box {
+      h4 {
+        color: #ff5b79;
+        font-weight: 800;
+        font-size: 1.5rem;
+        line-height: 115%;
+        letter-spacing: 0.07em;
+      }
+      h3 {
+        color: #000000;
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 115%;
+        letter-spacing: 0.09em;
+      }
+      small {
+        font-weight: 400;
+        font-size: 0.75rem;
+        line-height: 170%;
+        color: #828282;
+      }
+      .list-btn {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .size,
+        .color {
+          .title {
+            font-weight: 800;
+            font-size: 0.7rem;
+            line-height: 115%;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #000000;
+          }
+          .btn {
+            margin: 0;
+            padding: 0;
+          }
+        }
+        .size {
+          .btn {
+            button {
+              background: none;
+              font-weight: 400;
+              font-size: 0.75rem;
+              line-height: 170%;
+              color: #828282;
+              &:hover {
+                color: black;
+              }
+            }
+          }
+        }
+        .color {
+          .btn {
+            display: flex;
+            gap: 1rem;
+            button {
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              &:nth-child(1) {
+                background: #ff5b79;
+              }
+              &:nth-child(2) {
+                background: #4bd4ff;
+              }
+              &:nth-child(3) {
+                background: #ffdd2d;
+              }
+              &:nth-child(4) {
+                background: #868686;
+              }
+            }
+          }
+        }
+      }
+      .content-btn {
+        text-align: center;
+        button {
+          background: #ff5b79;
+          border-radius: 68px;
+          color: white;
+          padding: 10px;
+        }
+      }
+    }
+    .content-img{
+        height: auto;
+        display: flex;
+        align-items: center;
+        .thumb{
+            height: 300px;
+            width: 400px;
+        }
+    }
+  }
+}
+
+.footer {
+  .text-box {
+    h4 {
+      font-weight: 800;
+      font-size: 0.8rem;
+      line-height: 115%;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #000000;
+    }
+    .addred {
+      font-weight: 400;
+      font-size: 0.6rem;
+      line-height: 115%;
+      letter-spacing: 0.08em;
+      text-transform: lowercase;
+      color: #4f4f4f;
+    }
+    }
+    .btn {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        button {
+          font-weight: 800;
+          font-size: 1rem;
+          line-height: 115%;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          color: #000000;
+          padding: 10px;
+          margin: 0;
+          &:nth-child(1) {
+            background: #ff5b79;
+          }
+          &:nth-child(2) {
+            background: #4bd4ff;
+          }
+        }
+    }
+  }
